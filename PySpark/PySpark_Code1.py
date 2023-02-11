@@ -22,10 +22,11 @@ mySchema = """Name string, id int, salary float"""
 
 #Create DataFrame using the above list and schema
 df_list = spark.createDataFrame(myList,mySchema)
+df_list.show()
 
 #Provide the explain plan of written code
 df_list.explain(extended=True)
 
-#Stops the Spark Session
+#Stop the Spark Session
 spark.stop()
 
